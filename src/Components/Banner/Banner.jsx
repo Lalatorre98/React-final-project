@@ -31,7 +31,7 @@ const Banner = () => {
 
             setMainArticle(articles[0])
             setOtherArticles(articles.splice(1))
-        })
+        }).catch(err => console.log(err))
 
     },[] )
   return <div className='banner-container'>

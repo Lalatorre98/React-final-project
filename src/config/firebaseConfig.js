@@ -4,6 +4,11 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { getFirestore } from "firebase/firestore";
 
+// for auth
+import { getAuth } from "firebase/auth";
+
+import {getStorage} from "firebase/storage"
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyChfPBafKim98cfZkttQbGAoDaYyUFcZXk",
@@ -19,3 +24,8 @@ const app = initializeApp(firebaseConfig);
 
 //setup database and export it 
 export const db = getFirestore(app)
+
+//set up auth amd export it
+export const auth = getAuth()
+
+export const storage = getStorage(app)
